@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\hipster-core",
+    "\\hipster-core\\src",
+    "\\hipster-core\\src\\main",
+    "\\hipster-core\\src\\main\\java",
+    "\\hipster-core\\src\\main\\java\\es",
+    "\\hipster-core\\src\\main\\java\\es\\usc",
+    "\\hipster-core\\src\\main\\java\\es\\usc\\citius",
+    "\\hipster-core\\src\\main\\java\\es\\usc\\citius\\hipster",
+    "\\hipster-core\\src\\main\\java\\es\\usc\\citius\\hipster\\algorithm"
+  ],
+  "SelectedNode": "\\hipster-core\\src\\main\\java\\es\\usc\\citius\\hipster\\algorithm\\ADStarForward.java",
+  "PreviewInSolutionExplorer": false
+}
