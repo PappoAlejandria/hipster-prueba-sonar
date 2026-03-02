@@ -72,23 +72,21 @@ public class DepthLimitedSearch <A,S,N extends Node<A,S,N>> extends Algorithm<A,
         nodeStack.add(tempStackNode);
 
         while(!nodeStack.isEmpty()) {
-            if(this.currentDepth <= this.maximumDepth) {
-                StackNode temp = nodeStack.pop();
-                if(!path.contains(temp.getNode()) && ((UnweightedNode) temp.getNode()).state().equals(((UnweightedNode)this.finalNode).state())){
-                    this.path.add((S) temp.getNode().state());
-                    return true;
-                }  else {
-                    this.path.add((S) temp.getNode().state());
-                    for(StackNode child : temp.getChildren()) {
-                        if(!this.path.contains(child.getNode().state())) {
-                            nodeStack.add(child);
-                        }
-                    }
-                    this.incrementCurrentDepth();
-                }
-            } else {
+            if(this.currentDepth > this.maximumDepth){
                 return false;
             }
+            StackNode temp = nodeStack.pop();
+            if(!path.contains(temp.getNode()) && ((UnweightedNode) temp.getNode()).state().equals(((UnweightedNode)this.finalNode).state())){
+                this.path.add((S) temp.getNode().state());
+                return true;
+            }
+            this.path.add((S) temp.getNode().state());
+            for(StackNode child : temp.getChildren()) {
+                if(!this.path.contains(child.getNode().state())) {
+                    nodeStack.add(child);
+                }
+            }
+            this.incrementCurrentDepth();
         }
         return false;
     }
