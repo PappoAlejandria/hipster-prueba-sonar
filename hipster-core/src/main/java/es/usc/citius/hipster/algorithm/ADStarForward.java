@@ -180,7 +180,6 @@ public class ADStarForward<A,S,C extends Comparable<C>, N extends es.usc.citius.
                 }
             } else {
                 this.open.remove(state);
-                //this.queue.remove(node);
                 this.incons.remove(state);
             }
             //remove flag to update queues
